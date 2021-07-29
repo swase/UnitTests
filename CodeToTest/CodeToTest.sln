@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeToTest", "CodeToTest\CodeToTest.csproj", "{1B1CB07C-2C9A-4FF8-939C-1A5D4C820420}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestLesson1_greetingAndClassification", "CodeToTest\UnitTestLesson1_greetingAndClassification.csproj", "{1B1CB07C-2C9A-4FF8-939C-1A5D4C820420}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCode", "TestCode\TestCode.csproj", "{0B413FA6-9796-4D74-A446-830DB9D46792}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestCode", "TestCode\TestCode.csproj", "{0B413FA6-9796-4D74-A446-830DB9D46792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classification_tests", "Classification_tests\Classification_tests.csproj", "{8E7FCBA8-C852-41F9-B7A0-3107FE24CDB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classification_tests", "Classification_tests\Classification_tests.csproj", "{8E7FCBA8-C852-41F9-B7A0-3107FE24CDB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using CodeToTest;
+using System;
 
 namespace Classification_tests
 {
@@ -41,6 +42,15 @@ namespace Classification_tests
         {
 
             Assert.That(Program.AvailableClassifications(age), Is.EqualTo("All films are available."));
+        }
+
+        [TestCase(-1)]
+        [TestCase(-24)]
+
+        public void GivenANegativeAge_AvailableClassifications_Returns_ArgumentOutOfRangeException(int age)
+        {
+            Assert.That(() => Program.AvailableClassifications(age), 
+                Throws.TypeOf<ArgumentOutOfRangeException>().With.Message.Contains("Age cannot be less than 0"));
         }
 
     }

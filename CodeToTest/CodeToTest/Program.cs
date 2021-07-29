@@ -12,6 +12,10 @@ namespace CodeToTest
 
         public static string Greeting(int timeOfDay)
         {
+            if (timeOfDay < 0 || timeOfDay > 24)
+            {
+                throw new ArgumentOutOfRangeException($"Given time: {timeOfDay}, out of range. Must be >= 0 and <= 24");
+            }
             string greeting;
             if (timeOfDay >= 5 && timeOfDay <= 12)
             {
@@ -31,6 +35,10 @@ namespace CodeToTest
         public static string AvailableClassifications(int ageOfViewer)
         {
             string result;
+            if (ageOfViewer < 0)
+            {
+                throw new ArgumentOutOfRangeException($"Age cannot be less than 0");
+            }
             
             if(ageOfViewer < 12)
             {

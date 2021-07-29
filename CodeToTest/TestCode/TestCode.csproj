@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Classification_tests\Classification_tests.csproj" />
-    <ProjectReference Include="..\CodeToTest\CodeToTest.csproj" />
+    <ProjectReference Include="..\CodeToTest\UnitTestLesson1_greetingAndClassification.csproj" />
   </ItemGroup>
 
 </Project>

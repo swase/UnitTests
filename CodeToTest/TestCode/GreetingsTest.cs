@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using CodeToTest;
+using System;
 
 namespace TestCode
 {
@@ -45,7 +46,21 @@ namespace TestCode
             Assert.That(result, Is.EqualTo(expectedOutput));
         }
 
+        [TestCase(25)]
+        [TestCase(100)]
+        public void GivenATimeOfGreaterThan24_Greeting_ReturnsArgumentOutOfRangeException(int time)
+        {
+            Assert.That(() => Program.Greeting(time), 
+                Throws.TypeOf<ArgumentOutOfRangeException>().With.Message.Contains("Must be >= 0 and <= 24"));
+        }
 
+        [TestCase(-1)]
+        [TestCase(-24)]
+        public void GivenATimeOfLessThan0_Greeting_ReturnsArgumentOutOfRangeException(int time)
+        {
+            Assert.That(() => Program.Greeting(time),
+                Throws.TypeOf<ArgumentOutOfRangeException>().With.Message.Contains("Must be >= 0 and <= 24"));
+        }
 
     }
 }
